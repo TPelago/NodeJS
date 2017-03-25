@@ -6,6 +6,11 @@ router.get('/', function(req, res, next) {
 
 });
 
+router.post('/form', function(req, res, next) {
+	var firstname = req.param('firstname');
+	res.redirect('/hello/' + firstname);
+});
+
 router.get('/:name', function(req, res, next) {
 	var name = req.params.name;
 	var img_link;

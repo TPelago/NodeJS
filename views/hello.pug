@@ -1,6 +1,13 @@
 extends layout
 
 block content
-
-      h1= title
-      
+	h1= title
+	form(action="/hello/form", method="POST")
+		div
+		label(for="firstname") Prenom: 
+		input(name="firstname" value="")
+		br
+		label(for="lastname") Nom: 
+		input(name="lastname" value="")
+		br
+		button(type="submit") Send my greetings
